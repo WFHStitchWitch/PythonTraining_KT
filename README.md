@@ -1,2 +1,2 @@
-# PythonTraining_MPCS-51042
-Training materials clone from Chelsea Troy's interactive textbook of course materials.
+# PythonTraining_KT
+Training materials from assorted sources as my bad fourth attempt to learn Python.
