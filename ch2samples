@@ -1,10 +1,10 @@
 str1 = 'spa"m'
 str2 = "sp\"a'm"
-str3 = ' ' ' Here is a list of names all on different lines
-""Bob"
+str3 = '''Here is a list of names all on different lines
+"Bob"
 "Sally"
 "Joe"
-"Karen" ' ' '
+"Karen"'''
 str4 = """ Here is a list of names on all different lines
 'Bob'
 'Sally'
@@ -30,3 +30,9 @@ print("----")
 print(str7)
 print("----")
 print(non_raw_str7)
+print('String formatting with f-string syntax:')
+num = 4543
+name = 'Bird Sanctuary'
+suffix = 'Road'
+f_str4 = f'Address = {num} {name} {suffix}'
+print(f_str4)
