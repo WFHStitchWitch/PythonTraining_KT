@@ -28,11 +28,11 @@ so you don't have to rerun your kernel every time you change your homework files
             actual = function(*example[:-1])
 
             if expected == actual:
-                passed += 1 # if the expected variable evaluates as equal to the actual variable, then the passed variable gets a new value of "passed+1", operating to add +1 to the existing value of passed. Passed starts at zero, so running will count up number of passed evaluations when running the test function...?
+                passed += 1 # if the expected variable evaluates as equal to the actual variable, then the passed variable gets a new value of "passed+1", operating to add +1 to the existing value of passed. Passed starts at zero, so running will count up number of passed evaluations when running the test function.
             else:
-                print(f"Whoops. For example {example}, the function returned {actual}.") # if the expected variable evaluates as not equal to the actual variable, then run the print function to print this string. Printing this string will insert the variable values of example and actual into the string upon evaluation.
+                print(f"Whoops. For example {example}, the function returned {actual}.") # if the expected variable evaluates as not equal to the actual variable, then run the print function to print this string. Printing this string will insert the variable values of example and actual into the string upon evaluation. Uses f-string notation.
 
-        print(f"\n{passed} out of {run} examples worked as expected.") # prints the final evaluation of the test function being run as a string with variable values calculated and inserted. 
+        print(f"\n{passed} out of {run} examples worked as expected.") # prints the final evaluation of the test function being run as a string with variable values calculated and inserted.Uses f-string
 
 **3. Does this function have a return value? How do you know?**
 
