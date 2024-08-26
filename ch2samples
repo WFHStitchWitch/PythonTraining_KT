@@ -1,0 +1,32 @@
+str1 = 'spa"m'
+str2 = "sp\"a'm"
+str3 = ' ' ' Here is a list of names all on different lines
+""Bob"
+"Sally"
+"Joe"
+"Karen" ' ' '
+str4 = """ Here is a list of names on all different lines
+'Bob'
+'Sally'
+'Joe'
+'Karen'"""
+str5 = "Bob\tSally\nJoe"
+str6 = 'Bob\tSally\nJoe'
+str7 = r'C:\new\test.py'
+non_raw_str7 = 'C:\new\test.py'
+
+print(str1)
+print("----")
+print(str2)
+print("----")
+print(str3)
+print("----")
+print(str4)
+print("----")
+print(str5)
+print("----")
+print(str6)
+print("----")
+print(str7)
+print("----")
+print(non_raw_str7)
