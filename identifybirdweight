@@ -1,0 +1,20 @@
+def identify_bird(weight):
+    '''
+    Identifies birds (approximately) by their weight
+    Inputs:
+        weight(float): the bird's weight in grams
+    Output:
+        returns the likely species of the bird as a string
+    '''
+    species = ''
+    if weight < 100:
+        species = "Budgie"
+    elif weight < 200:
+        species = "Sun Conure"
+    elif weight < 1000:
+        species = "Toucan"
+    else:
+        species = "Maccaw"
+    return species
+print(identify_bird(17))
+print(identify_bird(240))
