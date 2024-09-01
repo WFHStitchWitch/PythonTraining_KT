@@ -1,8 +1,9 @@
 import random #import Python's Random module from the built-in standard library, because I can't be bothered to make up my own sequences of numbers for this function.
 
-list(string_1): []
-list(string_2): [] 
+list(string_1) []
+list(string_2) [] 
 #establish a sequence variable named string_1 with type list, starting with nothing in it
+
 random.randint(-1000, 1001) #want to run a random number generator a bunch of times and then add the generated integers into string_1 and also string_2.
 
 #s.append(x) operation
