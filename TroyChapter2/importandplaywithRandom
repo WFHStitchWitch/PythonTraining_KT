@@ -1,0 +1,16 @@
+import random
+def generate_random_numbers(count, start, end):
+    random_numbers = []
+    for _ in range(count):
+        random_numbers.append(random.randint(start,end))
+    return random_numbers
+
+count = 20
+start = -1000
+end = 1001
+random_numbers = generate_random_numbers(count, start, end)
+
+print(random_numbers)
+
+'''
+This module uses Python's "random" library. Line 1 imports it for use in this module. Line 2 defines a function named generate_random_numbers and gives it parameters. Lines 8-10 give the parameter variables some values to hold. Line 11 creates a variable named random_numbers that holds a call to the function generate_random_numbers. This was required or else nothing would print. The variable random_numbers started out as an empty list inside the definition of the generation function, but it wasn't accessible to the print function until later modifying that the variable random_numbers should call to that function and run it.'''

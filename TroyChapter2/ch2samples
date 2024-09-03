@@ -1,0 +1,62 @@
+str1 = 'spa"m'
+str2 = "sp\"a'm"
+str3 = '''Here is a list of names all on different lines
+"Bob"
+"Sally"
+"Joe"
+"Karen"'''
+str4 = """ Here is a list of names on all different lines
+'Bob'
+'Sally'
+'Joe'
+'Karen'"""
+str5 = "Bob\tSally\nJoe"
+str6 = 'Bob\tSally\nJoe'
+str7 = r'C:\new\test.py'
+non_raw_str7 = 'C:\new\test.py'
+
+print(str1)
+print("----")
+print(str2)
+print("----")
+print(str3)
+print("----")
+print(str4)
+print("----")
+print(str5)
+print("----")
+print(str6)
+print("----")
+print(str7)
+print("----")
+print(non_raw_str7)
+print('String formatting with f-string syntax:')
+num = 4543
+name = 'Bird Sanctuary'
+suffix = 'Road'
+f_str4 = f'Address = {num} {name} {suffix}'
+print(f_str4)
+print('-----')
+#String concatenation
+str10 = 'hello' + 'world' + 'helloworld'
+print(str10)
+print('---')
+#List concatenation
+list = ['a']
+new_list = list + [4,5,6]
+print(new_list)
+print('---')
+#Tuple concatenation
+print((1,2)+(3,4))
+print('-----')
+
+#Sequence slicing
+S = 'MPCS51042'
+list2 = ['Bob', 'Sally', 'Tina', 13, 42]
+tup2 = (1, 2, 3, 4, 5)
+
+print(S[1:3])
+print('-_-_-_')
+print(list2[2:4])
+print(tup2[1:3])
+print(4 in list2)
