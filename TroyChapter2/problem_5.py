@@ -11,3 +11,4 @@ def mean(string_of_numbers):
             a float, the mean of the inputted numbers.
         '''
     pass
+from problem_3 import generate_random_numbers
