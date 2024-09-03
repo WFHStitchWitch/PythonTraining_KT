@@ -1,0 +1,48 @@
+''' When Keisha runs her program, she gets an error. She forgot to test her code as she went, so there might be several different bugs hiding. She suggests you pair program to fix them together!
+
+Run the program and examine the error message in the console.
+Use the error message and linter to identify and fix the bug.
+Repeat, until the program runs without any errors.
+Pay attention to the line of code that the error message points to. Be sure to keep the intent of the program the same - Keisha won’t be satisfied if you just delete lines of code!
+
+print("Evaluating string expressions...)
+
+# What does each string expression evaluate to?
+print("python" + "3")
+prin("computer" + " " + "programming")
+print("\n\n\n")
+print("4" + "3.1" + "5.8")
+
+# Display a divider surrounded by blank lines.
+print()
+print("----------")
+print()
+
+print("Evaluating integer and float expressions...")
+
+# What does each numeric expression evaluate to?
+print(40 + 7)
+print(1.5 + 1.5)
+print(2.00000)
+print(-1 + 0.66) '''
+
+print("Evaluating string expressions...")
+
+# What does each string expression evaluate to?
+print("python" + "3")
+print("computer" + " " + "programming")
+print("\n\n\n")
+print("4" + "3.1" + "5.8")
+
+# Display a divider surrounded by blank lines.
+print()
+print("----------")
+print()
+
+print("Evaluating integer and float expressions...")
+
+# What does each numeric expression evaluate to?
+print40 + 7)
+print(1.5 + 1.5)
+print(2.00000)
+print(-1 + 0.66)
