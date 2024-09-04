@@ -1,4 +1,5 @@
 {
     "files.autoSave": "afterDelay",
-    "python.analysis.typeCheckingMode": "basic"
+    "python.analysis.typeCheckingMode": "basic",
+    "python.missingPackage.severity": "Information"
 }
