@@ -1,0 +1,58 @@
+from tkinter import *
+from tkinter import ttk
+
+'''Notice that we've imported everything (*) from the tkinter module. That way, we can call tkinter functions, etc., without prefixing them with the module name. This is standard Tkinter practice.
+
+However, because we've imported just ttk itself, we'll need to prefix anything inside that submodule. For example, calling Entry(...) would refer to the Entry class inside the tkinter module (classic widgets). We'd need ttk.Entry(...) to use the Entry class inside ttk (themed widgets).
+
+As you'll see, several classes are defined in both modules. Sometimes you will need one or the other, depending on the context. Explicitly requiring the ttk prefix facilitates this and will be the style used in this tutorial.'''
+
+def calculate(*args):
+    '''
+    As you can clearly see, this routine takes the number of feet from our entry widget, does the calculation, and places the result in our label widget.
+
+    Say what? It doesn't look like we're doing anything with those widgets! Here's where the magic textvariable options we specified when creating the widgets come into play. We specified the global variable feet as the textvariable for the entry. Whenever the entry changes, Tk will automatically update the global variable feet. Similarly, if we explicitly change the value of a textvariable associated with a widget (as we're doing for meters which is attached to our label), the widget will automatically be updated with the current contents of the variable. For Python, the only caveat is that these variables must be an instance of the StringVar class. Slick.
+    '''
+    try:
+        value = float(feet.get())
+        meters.set(int(0.3048 * value * 10000.0 + 0.5)/10000.0)
+    except ValueError:
+        pass
+
+#Sets up the main application window with a title "Feet to Meters"
+root = Tk()
+root.title("Feet to Meters")
+
+#Create a frame widget to hold the contents of the UI
+mainframe = ttk.Frame(root, padding="3 3 12 12")
+mainframe.grid(column=0, row=0, sticky=(N, W, E, S))
+root.columnconfigure(0, weight=1)
+root.rowconfigure(0, weight=1)
+
+#Create the entry widget, inputting the number of feet to convert
+feet = StringVar()
+feet_entry = ttk.Entry(mainframe, width=7, textvariable=feet)
+feet_entry.grid(column=2, row=1, sticky=(W, E))
+
+#Create the remaining widgets: one that displays the resulting meters calculated, a "Calculate" button, and also static text labels for the user of the application to read
+meters = StringVar()
+ttk.Label(mainframe, textvariable=meters).grid(column=2, row=2, sticky=(W, E))
+
+ttk.Button(mainframe, text="Calculate", command=calculate).grid(column=3, row=3, sticky=W)
+
+ttk.Label(mainframe, text="feet").grid(column=3, row=1, sticky=W)
+ttk.Label(mainframe, text="is equivalent to").grid(column=1, row=2, sticky=E)
+ttk.Label(mainframe, text="meters").grid(column=3, row=2, sticky=W)
+
+
+#Walks through all the widgets contained inside our content frame, adds padding so they don't look scrunched.
+for child in mainframe.winfo_children(): 
+    child.grid_configure(padx=5, pady=5)
+
+#Tells TK to focus on the entry widget where the user will enter some input. The cursor will start in that field. When a user presses Return key (Enter key), it will call to the Calculate function to run.
+feet_entry.focus()
+root.bind("<Return>", calculate)
+
+root.mainloop()
+
+''' https://tkdocs.com/tutorial/firstexample.html '''

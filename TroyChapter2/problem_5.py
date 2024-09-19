@@ -1,5 +1,5 @@
 
-def mean(string_of_numbers):
+def mean():
     '''
         This function takes in a space-separated string of integers and floats and
         returns a their mean as a float.
@@ -10,5 +10,8 @@ def mean(string_of_numbers):
         Output:
             a float, the mean of the inputted numbers.
         '''
-    pass
-from problem_3 import generate_random_numbers
+    string_of_numbers = input("Enter a whitespace-separated string of numbers: ")
+    numbers = list(map(float, string_of_numbers.split()))
+    return sum(numbers) / len(numbers)
+
+print(mean())
